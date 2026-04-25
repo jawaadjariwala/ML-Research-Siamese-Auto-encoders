@@ -1,5 +1,14 @@
 # Advancing Cybersecurity Anomaly Detection: Siamese Autoencoders with Curriculum Learning
 
+**NOTE:**
+
+**This Repo consists of two papers as you would see named Siamese_Paper_Part_1 and Siamese_Papaer_Part2_Extended.
+Part 1 is the first paper I wrote for my Independant Study in Cyber Security which I have included in here for better understanding.** 
+
+**Part 2 is an extension or you could say a revised version of the first paper for my special topics in computer science class which goes even deeper and explores multiple approaches which are not present in part 1.** 
+
+**All the resources in this repo are related to part 2 which is the final paper. Knowloedge of Part 1 is not necessarily required to understand Part 2.**
+
 **RUC Practical AI - Fall 2025 Final Project**
 
 A comprehensive research project investigating Siamese Autoencoder architectures trained via Curriculum Learning for network intrusion detection. This project integrates adversarial robustness testing, explainable AI, and data drift detection to address key challenges in deploying deep learning models for cybersecurity applications.
