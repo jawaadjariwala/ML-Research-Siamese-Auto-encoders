@@ -201,8 +201,8 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 ## Contact
 
 For questions, issues, or contributions, please contact:
-- **Email**: [Your Email]
-- **GitHub Issues**: [Repository Issues Page]
+- **Email**: jawaadjariwala1jan@gmail.com
+- **GitHub Issues**: jawaadjariwala1jan@gmail.com
 
 ## Acknowledgments
 
@@ -219,7 +219,7 @@ If you use this project in your research, please cite:
 @software{siamese_autoencoder_ids,
   title={Advancing Cybersecurity Anomaly Detection: Siamese Autoencoders with Curriculum Learning},
   author={[Your Name]},
-  year={2024},
+  year={2025},
   url={[Repository URL]}
 }
 ```
