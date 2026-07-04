@@ -28,6 +28,38 @@ Our solution combines:
 - **Adversarial Robustness Testing**: Evaluate model resilience using the Adversarial Robustness Toolkit (ART)
 - **Explainable AI**: Generate feature attributions using Captum for model interpretability
 
+## Results
+
+Binary intrusion detection on **NSL-KDD** (KDDTrain+ / KDDTest+, ~148K samples, 41 features).
+The Siamese Autoencoder with curriculum learning substantially outperforms a standard
+autoencoder baseline.
+
+| Metric   | Baseline AE | Siamese AE + Curriculum | Improvement   |
+|----------|-------------|-------------------------|---------------|
+| Accuracy | 54.7%       | **82.1%**               | **+27.4 pts** |
+| ROC-AUC  | ~0.53       | **~0.84**               | **+31.4 pts** |
+
+### Architecture & training
+- **Model:** Siamese Autoencoder, 41 → 32-unit latent encoding, symmetric encoder/decoder;
+  learns an explicit distance metric between normal and attack states.
+- **Loss:** combined **α · reconstruction + (1 − α) · margin-based contrastive**.
+- **Curriculum:** progressive easy → medium → hard sample scheduling (**5 / 10 / 15 epochs**).
+- **Framework:** PyTorch.
+
+### Robustness, explainability & deployment
+- Adversarial testing with **IBM ART** (FGSM evasion attacks)
+- **Captum** integrated-gradients feature attribution
+- **Kolmogorov–Smirnov (KS)** drift detection
+- **ONNX** export for portable deployment
+
+### Honest limitations
+- Final ROC-AUC (~0.84) fell short of the 0.95 production target.
+- The baseline comparison carries a **BatchNorm confound**, so part of the gain may trace
+  to that rather than the architecture alone.
+- Adversarial evaluation used ~100 samples and explainability used only 4 anomalous
+  samples — both are small.
+
+
 ## Usage Instructions
 
 ### Prerequisites
